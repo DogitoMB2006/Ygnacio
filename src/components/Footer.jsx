@@ -12,10 +12,10 @@ const Footer = () => {
           <p className="text-sm italic">“Calidad y elegancia que protegen tu hogar.”</p>
         </div>
 
-        {/* Contacto Rápido */}
+        {/* Contacto rapidito <---- */}
         <div className="flex flex-col gap-2 items-center sm:items-start">
           <a
-            href="https://wa.me/18295984152" // cámbialo a tu número real
+            href="https://wa.me/18295984152" 
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-green-400 transition"
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Redes Sociales */}
+        {/* Redes Sociales  de la compania <---*/}
         <div className="flex gap-4 justify-center sm:justify-end mt-4 sm:mt-0">
           <a href="https://facebook.com" target="_blank" className="hover:text-blue-500">
             <FaFacebookF size={20} />
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Línea inferior */}
+      {/* letrica chiquita */}
       <div className="mt-8 border-t border-white/10 pt-4 text-center text-sm text-gray-500">
         &copy; {new Date().getFullYear()} Ygnaciom. Todos los derechos reservados.
       </div>
