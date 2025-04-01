@@ -1,0 +1,9 @@
+# Ignora node_modules
+node_modules/
+
+# Ignora el build de Vite
+dist/
+
+# Archivos del sistema
+.DS_Store
+.env
