@@ -1,8 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
-  @apply bg-gray-50 text-gray-800;
-  background-image: linear-gradient(to bottom, #f3f4f6, #e5e7eb);
+  @apply text-gray-100;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #1a1a1a, #2f2f2f);
 }

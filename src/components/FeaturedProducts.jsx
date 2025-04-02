@@ -25,7 +25,7 @@ const images = [
 ];
 
 const ventanas = [
-  { src: ventana1, caption: 'Ventana Corrediza de Aluminio Blanco' },
+  { src: ventana1, caption: 'ventanas Corrediza de Aluminio Blanco' },
   { src: ventana2, caption: 'Ventana de Seguridad con Rejas Decorativas' },
   { src: ventana3, caption: 'Ventana de Vidrio Templado Moderna' },
   { src: ventana4, caption: 'Ventana Doble Hoja con Mosquitero' },
