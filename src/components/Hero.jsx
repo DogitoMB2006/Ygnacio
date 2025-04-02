@@ -35,21 +35,21 @@ const Hero = () => {
         </h1>
 
         {/* Texto animado de frases */}
-        <div className="min-h-[120px] mt-4 relative overflow-hidden px-2">
+        <div className="mt-4 px-2">
+  <AnimatePresence mode="wait">
+    <motion.p
+      key={index}
+      className="text-lg md:text-xl text-gray-200"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.8 }}
+    >
+      {phrases[index]}
+    </motion.p>
+  </AnimatePresence>
+</div>
 
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={index}
-              className="text-lg md:text-xl text-gray-200 absolute"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.8 }}
-            >
-              {phrases[index]}
-            </motion.p>
-          </AnimatePresence>
-        </div>
 
         <span className="block mt-6 text-sm text-gray-300 font-medium">
           📍 C/La Victoria, Cruce de la Virgen #8, Sto. Dgo. Norte
