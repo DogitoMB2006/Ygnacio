@@ -35,7 +35,8 @@ const Hero = () => {
         </h1>
 
         {/* Texto animado de frases */}
-        <div className="h-[100px] mt-4 relative overflow-hidden">
+        <div className="min-h-[120px] mt-4 relative overflow-hidden px-2">
+
           <AnimatePresence mode="wait">
             <motion.p
               key={index}
