@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#1e1e1e]/90 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center sticky top-0 z-50 shadow-xl border-b border-white/10 transition-all">
-      <div className="text-xl font-bold tracking-wider">Puertas Y ventanas Ygnacio</div>
+      <div className="text-xl font-bold tracking-wider">Puertas Y ventanas Empresa</div>
 
       {}
       <button className="md:hidden" onClick={toggleMenu}>
