@@ -26,11 +26,11 @@ const images = [
 
 const ventanas = [
   { src: ventana1, caption: 'ventanas Corrediza de Aluminio Blanco' },
-  { src: ventana2, caption: 'Ventana de Seguridad con Rejas Decorativas' },
-  { src: ventana3, caption: 'Ventana de Vidrio Templado Moderna' },
-  { src: ventana4, caption: 'Ventana Doble Hoja con Mosquitero' },
-  { src: ventana5, caption: 'Ventana de Baño Satinada' },
-  { src: ventana6, caption: 'Ventana con Acabado de Madera Sintética' },
+  { src: ventana2, caption: 'Ventanas de Seguridad con Rejas Decorativas' },
+  { src: ventana3, caption: 'Ventanas de Vidrio Templado Moderna' },
+  { src: ventana4, caption: 'Ventanas Doble Hoja con Mosquitero' },
+  { src: ventana5, caption: 'Ventanas de Baño Satinada' },
+  { src: ventana6, caption: 'Ventanas con Acabado de Madera Sintética' },
 ];
 
 const FeaturedProducts = () => {
