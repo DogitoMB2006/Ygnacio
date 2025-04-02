@@ -12,7 +12,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % phrases.length);
-    }, 5000); // Cambia cada 5 segundos
+    }, 5000); // eso e que dura 5 segundos cada frase
 
     return () => clearInterval(interval);
   }, []);
@@ -31,10 +31,10 @@ const Hero = () => {
         className="z-10 px-4 max-w-3xl"
       >
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight drop-shadow-md">
-          Puertas y Ventanas Ygnaciom
+          Puertas y Ventanas Ygnacio
         </h1>
 
-        {/* Texto animado de frases */}
+        {/*esto es para los textos esos con animacione*/}
         <div className="mt-4 px-2">
   <AnimatePresence mode="wait">
     <motion.p

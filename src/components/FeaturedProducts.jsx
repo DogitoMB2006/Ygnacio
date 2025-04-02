@@ -4,6 +4,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import CustomVideoPlayer from './CustomVideoPlayer'; // Importa el componente nuevo
 
 import toldo1 from '../assets/toldo1.jpg';
 import toldo2 from '../assets/toldo2.jpg';
@@ -12,9 +13,9 @@ import toldo4 from '../assets/toldo4.jpg';
 
 import ventana1 from '../assets/ventana1.jpg';
 import ventana2 from '../assets/ventana2.jpg';
-import ventana3 from '../assets/ventana3.jpg';
-import ventana4 from '../assets/ventana4.jpg';
-import ventana5 from '../assets/ventana5.jpg';
+import ventana3 from '../assets/ventanasbano.jpg';
+import ventana4 from '../assets/ventanasbano2.jpg';
+import ventana5 from '../assets/ventanasbano3.jpg';
 import ventana6 from '../assets/ventana6.jpg';
 
 const images = [
@@ -35,9 +36,9 @@ const ventanas = [
 
 const FeaturedProducts = () => {
   return (
-    <section className="py-10 bg-gray-100">
-      <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
-        Puertas y Ventanas Ygnaciom
+    <section className="py-6 sm:py-10 bg-gray-100">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-6 text-gray-800 px-4">
+        Puertas y Ventanas Ygnacio
       </h2>
 
       <div className="w-full max-w-5xl mx-auto px-4">
@@ -60,52 +61,64 @@ const FeaturedProducts = () => {
                 <img
                   src={img.src}
                   alt={img.caption}
-                  className="w-full h-[300px] sm:h-[400px] object-cover"
+                  className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2 text-lg font-medium">
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-1 sm:py-2 text-sm sm:text-lg font-medium">
                   {img.caption}
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-
-
       </div>
-      <h2 className="text-3xl font-bold text-center mt-16 mb-6 text-gray-800">
-  Ventanas Instaladas por Ygnaciom
-</h2>
+      
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mt-10 sm:mt-16 mb-4 sm:mb-6 text-gray-800 px-4">
+        Ventanas Instaladas por Ygnacio
+      </h2>
 
-<div className="w-full max-w-5xl mx-auto px-4">
-  <Swiper
-    spaceBetween={30}
-    centeredSlides={true}
-    autoplay={{
-      delay: 4000,
-      disableOnInteraction: false,
-    }}
-    pagination={{ clickable: true }}
-    navigation={true}
-    loop={true}
-    modules={[Autoplay, Pagination, Navigation]}
-    className="rounded-xl overflow-hidden shadow-lg"
-  >
-    {ventanas.map((img, index) => (
-      <SwiperSlide key={index}>
-        <div className="relative">
-          <img
-            src={img.src}
-            alt={img.caption}
-            className="w-full h-[300px] sm:h-[400px] object-cover"
-          />
-          <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2 text-lg font-medium">
-            {img.caption}
-          </div>
-        </div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>
+      <div className="w-full max-w-5xl mx-auto px-4">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+          navigation={true}
+          loop={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="rounded-xl overflow-hidden shadow-lg"
+        >
+          {ventanas.map((img, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative">
+                <img
+                  src={img.src}
+                  alt={img.caption}
+                  className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-1 sm:py-2 text-sm sm:text-lg font-medium">
+                  {img.caption}
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      
+      <div className="w-full max-w-5xl mx-auto px-4 mt-10 sm:mt-16">
+        <h2 className="text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-4 text-gray-800">
+          Nuestro Trabajo en Acción
+        </h2>
+
+        {/* Reproductor de video responsive */}
+        <CustomVideoPlayer />
+
+        <p className="text-center text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3 italic">
+          Mira nuestro proceso de instalación en acción ✨
+        </p>
+      </div>
     </section>
   );
 };
