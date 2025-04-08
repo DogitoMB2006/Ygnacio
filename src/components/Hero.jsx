@@ -19,9 +19,9 @@ const Hero = () => {
 
   return (
     <section
-      className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center text-white"
-      style={{ backgroundImage: `url('/hero.jpg')` }}
-    >
+    className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center text-white"
+    style={{ backgroundImage: `url('/hero.jpg')` }}
+  >
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
       <motion.div
@@ -30,10 +30,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="z-10 px-4 max-w-3xl"
       >
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight drop-shadow-md">
-          Puertas y Ventanas Ygnacio
-        </h1>
-
+       
         {/*esto es para los textos esos con animacione*/}
         <div className="mt-4 px-2">
   <AnimatePresence mode="wait">
@@ -45,15 +42,13 @@ const Hero = () => {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.8 }}
     >
-      {phrases[index]}
+    
     </motion.p>
   </AnimatePresence>
 </div>
 
 
-        <span className="block mt-6 text-sm text-gray-300 font-medium">
-          📍 C/La Victoria, Cruce de la Virgen #8, Sto. Dgo. Norte
-        </span>
+        
       </motion.div>
     </section>
   );

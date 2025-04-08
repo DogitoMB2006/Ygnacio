@@ -8,7 +8,7 @@ const Footer = () => {
         
         {/* Marca y Frase */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-2">Puertas y Ventanas Ygnaciom</h3>
+          <h3 className="text-xl font-semibold text-white mb-2">Puertas y Ventanas Ygnacio</h3>
           <p className="text-sm italic">“Calidad y elegancia que protegen tu hogar.”</p>
         </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
 
       {/* letrica chiquita */}
       <div className="mt-8 border-t border-white/10 pt-4 text-center text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} Ygnaciom. Todos los derechos reservados.
+        &copy; {new Date().getFullYear()} Ygnacio. Todos los derechos reservados.
       </div>
     </footer>
   );

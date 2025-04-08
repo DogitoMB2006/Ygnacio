@@ -16,7 +16,7 @@ import ventana2 from '../assets/ventana2.jpg';
 import ventana3 from '../assets/ventanasbano.jpg';
 import ventana4 from '../assets/ventanasbano2.jpg';
 import ventana5 from '../assets/ventanasbano3.jpg';
-import ventana6 from '../assets/ventana6.jpg';
+//import ventana6 from '../assets/ventana6.jpg';
 
 const images = [
   { src: toldo1, caption: 'Instalación de Toldo Retráctil' },
@@ -30,8 +30,8 @@ const ventanas = [
   { src: ventana2, caption: 'Ventanas de Seguridad con Rejas Decorativas' },
   { src: ventana3, caption: 'Ventanas de Vidrio Templado Moderna' },
   { src: ventana4, caption: 'Ventanas Doble Hoja con Mosquitero' },
-  { src: ventana5, caption: 'Ventanas de Baño Satinada' },
-  { src: ventana6, caption: 'Ventanas con Acabado de Madera Sintética' },
+  { src: ventana5, caption: 'Ventanas de Baño Satinada' }
+ // { src: ventana6, caption: 'Ventanas con Acabado de Madera Sintética' },
 ];
 
 const FeaturedProducts = () => {
