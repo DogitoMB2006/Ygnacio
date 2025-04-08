@@ -1,55 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
 
 const Hero = () => {
-  const phrases = [
-    'Transformamos tus espacios con diseño, calidad y elegancia. Especialistas en la fabricación e instalación de closets, puertas, ventanas, toldos y gabinetes de cocina a medida.',
-    'Creamos soluciones modernas y funcionales, combinando materiales de alta calidad con acabados impecables. ¡Dale un nuevo estilo a tu hogar con nosotros!',
-  ];
-
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % phrases.length);
-    }, 5000); // eso e que dura 5 segundos cada frase
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section
-    className="relative h-[500px] bg-cover bg-center flex items-center justify-center text-center text-white"
-    style={{ backgroundImage: `url('/hero.jpg')` }}
-  >
-      <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-
-      <motion.div
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="z-10 px-4 max-w-3xl"
-      >
-       
-        {/*esto es para los textos esos con animacione*/}
-        <div className="mt-4 px-2">
-  <AnimatePresence mode="wait">
-    <motion.p
-      key={index}
-      className="text-lg md:text-xl text-gray-200"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.8 }}
-    >
-    
-    </motion.p>
-  </AnimatePresence>
-</div>
-
-
-        
-      </motion.div>
+    <section className="w-full flex justify-center items-center overflow-hidden bg-[#0070b8]">
+      <img
+        src="/hero.jpg"
+        alt="Puertas y Ventanas Ygnacio"
+        className="w-full max-w-[1000px] h-auto object-contain"
+      />
     </section>
   );
 };
