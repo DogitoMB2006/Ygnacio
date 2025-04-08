@@ -122,7 +122,9 @@ const FeaturedProducts = () => {
         <h2 className="text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-4 text-gray-800">
           
         </h2>
-
+        <h2 className="text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-4 text-gray-800">
+          Closets Y gabinetes
+        </h2>
         <CustomVideoPlayer videoSrc={showcase2} />
 
         <p className="text-center text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3 italic">
