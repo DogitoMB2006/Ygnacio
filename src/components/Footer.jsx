@@ -29,10 +29,10 @@ const Footer = () => {
 
         {/* Redes Sociales  de la compania <---*/}
         <div className="flex gap-4 justify-center sm:justify-end mt-4 sm:mt-0">
-          <a href="https://facebook.com" target="_blank" className="hover:text-blue-500">
+          <a href="https://www.facebook.com/people/Ygnacio-Henrriquez/pfbid0abQvyTzhnYrRhxMfpAy86T8jsaJ17C3Ticsk1rtCokdqvQhrcxhNzdTsRzJBho7jl/" target="_blank" className="hover:text-blue-500">
             <FaFacebookF size={20} />
           </a>
-          <a href="https://instagram.com" target="_blank" className="hover:text-pink-500">
+          <a href="https://www.instagram.com/ygnacio_puertas_ventanas_y_mas/" target="_blank" className="hover:text-pink-500">
             <FaInstagram size={20} />
           </a>
         </div>

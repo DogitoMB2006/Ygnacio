@@ -1,10 +1,11 @@
+
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import CustomVideoPlayer from './CustomVideoPlayer'; // Importa el componente nuevo
+import CustomVideoPlayer from './CustomVideoPlayer';
 
 import toldo1 from '../assets/toldo1.jpg';
 import toldo2 from '../assets/toldo2.jpg';
@@ -16,7 +17,8 @@ import ventana2 from '../assets/ventana2.jpg';
 import ventana3 from '../assets/ventanasbano.jpg';
 import ventana4 from '../assets/ventanasbano2.jpg';
 import ventana5 from '../assets/ventanasbano3.jpg';
-//import ventana6 from '../assets/ventana6.jpg';
+
+import showcase2 from '../assets/showcase2.mp4';
 
 const images = [
   { src: toldo1, caption: 'Instalación de Toldo Retráctil' },
@@ -31,14 +33,13 @@ const ventanas = [
   { src: ventana3, caption: 'Ventanas de Vidrio Templado Moderna' },
   { src: ventana4, caption: 'Ventanas Doble Hoja con Mosquitero' },
   { src: ventana5, caption: 'Ventanas de Baño Satinada' }
- // { src: ventana6, caption: 'Ventanas con Acabado de Madera Sintética' },
 ];
 
 const FeaturedProducts = () => {
   return (
     <section className="py-6 sm:py-10 bg-gray-100">
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-6 text-gray-800 px-4">
-        Puertas y Ventanas Ygnacio
+        Toldos Y ventanas
       </h2>
 
       <div className="w-full max-w-5xl mx-auto px-4">
@@ -112,11 +113,20 @@ const FeaturedProducts = () => {
           Nuestro Trabajo en Acción
         </h2>
 
-        {/* Reproductor de video responsive */}
         <CustomVideoPlayer />
 
+        
+      </div>
+
+      <div className="w-full max-w-5xl mx-auto px-4 mt-10 sm:mt-16">
+        <h2 className="text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-4 text-gray-800">
+          
+        </h2>
+
+        <CustomVideoPlayer videoSrc={showcase2} />
+
         <p className="text-center text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3 italic">
-          Mira nuestro proceso de instalación en acción ✨
+          Observa otro de nuestros proyectos destacados ✨
         </p>
       </div>
     </section>
