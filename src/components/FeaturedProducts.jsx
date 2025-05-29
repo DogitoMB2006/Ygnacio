@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -19,6 +18,8 @@ import ventana4 from '../assets/ventanasbano2.jpg';
 import ventana5 from '../assets/ventanasbano3.jpg';
 
 import showcase2 from '../assets/showcase2.mp4';
+import showcase3 from '../assets/showcase3.mp4';
+import showcase4 from '../assets/showcase4.mp4';
 
 const images = [
   { src: toldo1, caption: 'Instalación de Toldo Retráctil' },
@@ -28,11 +29,17 @@ const images = [
 ];
 
 const ventanas = [
-  { src: ventana1, caption: 'ventanas Corrediza de Aluminio Blanco' },
+  { src: ventana1, caption: 'Ventanas Corrediza de Aluminio Blanco' },
   { src: ventana2, caption: 'Ventanas de Seguridad con Rejas Decorativas' },
   { src: ventana3, caption: 'Ventanas de Vidrio Templado Moderna' },
   { src: ventana4, caption: 'Ventanas Doble Hoja con Mosquitero' },
-  { src: ventana5, caption: 'Ventanas de Baño Satinada' }
+  { src: ventana5, caption: 'Ventanas de Baño Satinada' },
+];
+
+const showcaseVideos = [
+  { src: showcase2, caption: 'Closets y Gabinetes a Medida' },
+  { src: showcase3, caption: 'Proyecto de Ventanas y Puertas' },
+  { src: showcase4, caption: 'Diseños Personalizados y Acabados Finos' },
 ];
 
 const FeaturedProducts = () => {
@@ -72,7 +79,7 @@ const FeaturedProducts = () => {
           ))}
         </Swiper>
       </div>
-      
+
       <h2 className="text-2xl sm:text-3xl font-bold text-center mt-10 sm:mt-16 mb-4 sm:mb-6 text-gray-800 px-4">
         Ventanas Instaladas por Ygnacio
       </h2>
@@ -107,29 +114,36 @@ const FeaturedProducts = () => {
           ))}
         </Swiper>
       </div>
-      
-      <div className="w-full max-w-5xl mx-auto px-4 mt-10 sm:mt-16">
-        <h2 className="text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-4 text-gray-800">
-          Nuestro Trabajo en Acción
-        </h2>
-
-        <CustomVideoPlayer />
-
-        
-      </div>
 
       <div className="w-full max-w-5xl mx-auto px-4 mt-10 sm:mt-16">
         <h2 className="text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-4 text-gray-800">
-          
+          Proyectos en Video
         </h2>
-        <h2 className="text-xl sm:text-2xl font-bold text-center mb-3 sm:mb-4 text-gray-800">
-          Closets Y gabinetes
-        </h2>
-        <CustomVideoPlayer videoSrc={showcase2} />
 
-        <p className="text-center text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3 italic">
-          Observa otro de nuestros proyectos destacados ✨
-        </p>
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+          navigation={true}
+          loop={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="rounded-xl overflow-hidden shadow-lg"
+        >
+          {showcaseVideos.map((video, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative">
+                <CustomVideoPlayer videoSrc={video.src} />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-1 text-sm sm:text-base font-medium">
+                  {video.caption}
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
