@@ -73,36 +73,49 @@ const CustomVideoPlayer = ({ videoSrc = defaultVideo }) => {
 
   return (
     <div
-      className="relative w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-xl border border-gray-300"
+      className="relative w-full aspect-video max-w-5xl mx-auto rounded-xl overflow-hidden shadow-xl border border-gray-300 bg-black"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => isPlaying && setShowControls(false)}
     >
-      <div className="relative pb-[56.25%]">
-        <video
-          ref={videoRef}
-          className="absolute top-0 left-0 w-full h-full object-contain bg-black"
-          src={videoSrc}
+      <video
+        ref={videoRef}
+        className="w-full h-full object-contain"
+        src={videoSrc}
+        onClick={togglePlay}
+        onTimeUpdate={updateProgress}
+        onEnded={() => setIsPlaying(false)}
+        muted={isMuted}
+        loop
+        playsInline
+      />
+
+      {/* Botón central de Play (solo cuando está pausado) */}
+      {!isPlaying && (
+        <button
           onClick={togglePlay}
-          onTimeUpdate={updateProgress}
-          onEnded={() => setIsPlaying(false)}
-          muted={isMuted}
-          loop
-        />
-      </div>
+          className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/50 transition"
+        >
+          <FaPlay className="text-white text-5xl sm:text-6xl md:text-7xl" />
+        </button>
+      )}
 
-      <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/50 to-transparent p-4 text-white opacity-0 hover:opacity-100 transition-opacity">
-        <h3 className="text-lg font-medium">Nuestro Trabajo en Acción</h3>
-      </div>
-
-      <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
-        <div ref={progressRef} className="h-1 bg-gray-500 rounded-full mb-4 cursor-pointer relative" onClick={skipTo}>
+      {/* Controles de reproducción */}
+      <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 sm:p-4 transition-opacity duration-300 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
+        <div
+          ref={progressRef}
+          className="h-2 bg-gray-600 rounded-full mb-3 sm:mb-4 cursor-pointer relative"
+          onClick={skipTo}
+        >
           <div className="absolute top-0 left-0 h-full bg-blue-500 rounded-full" style={{ width: `${progress}%` }} />
-          <div className="absolute top-0 h-3 w-3 bg-white rounded-full -mt-1 shadow-md transform transition-transform hover:scale-125" style={{ left: `${progress}%` }} />
+          <div
+            className="absolute top-0 h-4 w-4 bg-white rounded-full -mt-1 shadow-md transform transition-transform hover:scale-125"
+            style={{ left: `${progress}%` }}
+          />
         </div>
 
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <button onClick={togglePlay} className="p-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition">
+          <div className="flex items-center gap-4">
+            <button onClick={togglePlay} className="p-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white">
               {isPlaying ? <FaPause /> : <FaPlay />}
             </button>
 
@@ -117,7 +130,7 @@ const CustomVideoPlayer = ({ videoSrc = defaultVideo }) => {
                 step="0.05"
                 value={volume}
                 onChange={handleVolumeChange}
-                className="w-20 h-1 bg-gray-500 rounded-full appearance-none cursor-pointer mr-2"
+                className="w-24 sm:w-28 h-2"
               />
             </div>
           </div>

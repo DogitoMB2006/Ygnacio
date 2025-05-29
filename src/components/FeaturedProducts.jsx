@@ -16,7 +16,7 @@ import ventana2 from '../assets/ventana2.jpg';
 import ventana3 from '../assets/ventanasbano.jpg';
 import ventana4 from '../assets/ventanasbano2.jpg';
 import ventana5 from '../assets/ventanasbano3.jpg';
-
+import showcase from '../assets/showcase.mp4';
 import showcase2 from '../assets/showcase2.mp4';
 import showcase3 from '../assets/showcase3.mp4';
 import showcase4 from '../assets/showcase4.mp4';
@@ -40,6 +40,7 @@ const showcaseVideos = [
   { src: showcase2, caption: 'Closets y Gabinetes a Medida' },
   { src: showcase3, caption: 'Proyecto de Ventanas y Puertas' },
   { src: showcase4, caption: 'Diseños Personalizados y Acabados Finos' },
+  { src: showcase, caption: 'Diseños Personalizados y Acabados Finos' },
 ];
 
 const FeaturedProducts = () => {

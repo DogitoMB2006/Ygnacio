@@ -20,6 +20,7 @@
     "swiper": "^11.2.6"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
